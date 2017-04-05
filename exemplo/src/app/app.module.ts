@@ -4,10 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { LoginComponent } from './pages/login/login.component';
+import { FoobarDirective } from './directives/foobar.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    FoobarDirective
   ],
   imports: [
     BrowserModule,
