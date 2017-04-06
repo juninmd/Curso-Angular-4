@@ -1,3 +1,7 @@
-<p>
-  login works!
-</p>
+<form (ngSubmit)="submit()" #loginForm="ngForm">
+  <label>login</label>
+  <input type="text" required name="usuario.login" [(ngModel)]="usuario.login">
+  <label>senha</label>
+  <input type="password" required name="usuario.senha" [(ngModel)]="usuario.senha">
+  <button>Enviar</button>
+</form>
