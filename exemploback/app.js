@@ -17,7 +17,12 @@ app.use((req, res, next) => {
     next();
 })
 app.get('/login', (req, res, next) => {
-    res.status(200).send({ retorno: "suceeso" });
+    if (req.header("usuario.senha") != 123) {
+        res.status(400).send({ retorno: "vacilou" });
+    }
+    else {
+        res.status(200).send({ retorno: "suceeso" });
+    }
 });
 
 app.listen('4500', () => {

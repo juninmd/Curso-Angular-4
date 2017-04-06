@@ -1,0 +1,29 @@
+<p>
+  Variável esconder: {{esconder}}
+</p>
+
+<code><p>Essa é uma two data bind</p></code>
+<input type="checkbox" [(ngModel)]="esconder">
+
+<code><p>Essa é uma condição</p></code>
+<div *ngIf="esconder;else apareca">
+  <p>Não estou mais escondido</p>
+</div>
+<ng-template #apareca>
+  <p>Estou escondido amigo</p>
+</ng-template>
+
+<code><p>Essa é uma lista</p></code>
+<ul>
+  <li *ngFor="let item of frutas">
+    {{item}}
+  </li>
+</ul>
+
+<code><p>Operações Matemáticas</p></code>
+<input type="number" min="1" [(ngModel)]="a">
+<input type="number" min="1" [(ngModel)]="b">
+<span><p>Adição = {{a+b}}</p></span>
+<span><p>Subtração = {{a-b}}</p></span>
+<span><p>Divisão = {{a/b}}</p></span>
+<span><p>Multiplicação = {{a*b}}</p></span>

@@ -12,6 +12,8 @@ import { FoobarDirective } from './directives/foobar.directive';
 import { MenuComponent } from './pages/menu/menu.component';
 
 import { LoginService } from './services/login.service';
+import { HomeComponent } from './pages/home/home.component';
+import { NovahomeComponent } from './pages/novahome/novahome.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { LoginService } from './services/login.service';
     AppComponent,
     LoginComponent,
     FoobarDirective,
-    MenuComponent
+    MenuComponent,
+    HomeComponent,
+    NovahomeComponent
   ],
   imports: [
     BrowserModule,
