@@ -7,10 +7,11 @@ export class LoginService {
 
   constructor(private http: Http) {
   }
+
   public login(body: any) {
     let headers = new Headers();
     headers.append("usuario.login", body.login);
     headers.append("usuario.senha", body.senha);
-    return this.http.get(environment.urlCore + "login", { headers: headers });
+    return this.http.get(`${environment.urlCore}login`, { headers: headers });
   }
 }
